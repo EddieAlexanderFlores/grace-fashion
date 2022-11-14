@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.search-bar {
+  height: fit-content;
+
+  input {
+    color: $my-brown-color;
+    border: 1px solid $my-brown-color;
+
+    &:focus {
+      color: $my-brown-color;
+      background-color: #fff;
+      border-color: $my-brown-color;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem $my-brown-color-rgb-opacity;
+    }
+
+    &::placeholder {
+      color: $my-brown-color;
+      opacity: 1;
+      font-size: small;
+    }
+  }
+
+  button {
+    color: $my-brown-color;
+    border-color: $my-brown-color;
+    background-color: $my-light-pink-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: white;
+      border-color: $my-brown-color !important;
+      background-color: $my-brown-color !important;
+    }
+  }
+}

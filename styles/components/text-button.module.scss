@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.text-button {
+  color: $my-brown-color;
+  border-color: $my-brown-color;
+  background-color: transparent;
+  width: fit-content;
+  height: max-content;
+
+  &:hover {
+    color: white;
+    background-color: $my-brown-color !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $my-brown-color !important;
+  }
+}

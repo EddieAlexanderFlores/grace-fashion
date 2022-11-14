@@ -1,0 +1,19 @@
+@use "bootstrap/scss/bootstrap";
+@use "abstracts" as *;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $base_font_family;
+  background-color: $my-body-bg-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

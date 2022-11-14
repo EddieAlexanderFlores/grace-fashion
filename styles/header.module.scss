@@ -1,0 +1,191 @@
+@use "abstracts" as *;
+@use "components" as *;
+
+.header {
+  background-color: $my-light-pink-color;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border-bottom: 1px solid $my-brown-color;
+}
+
+.logo {
+  width: 12.5rem;
+  object-fit: contain;
+  padding: 0;
+  margin: 0 0.5rem;
+}
+
+.nav {
+  &-link {
+    color: $my-brown-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $my-brown-color;
+      text-decoration-line: underline;
+      text-underline-offset: 0.5em;
+      animation-name: text-underline;
+      animation-timing-function: linear;
+      animation-duration: 180ms;
+    }
+  }
+}
+
+@keyframes text-underline {
+  from {
+    text-decoration-line: none;
+    text-underline-offset: 0em;
+  }
+  to {
+    text-decoration-line: underline;
+    text-underline-offset: 0.5em;
+  }
+}
+
+.navbar-items-container {
+  display: flex;
+  padding: 0;
+
+  & .toggle-button {
+    margin-left: auto;
+  }
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  &.show {
+    display: none;
+  }
+}
+
+.offcanvas {
+  &-header {
+    background-color: $my-light-pink-color;
+    color: $my-brown-color;
+
+    button {
+      width: 1.75rem;
+      height: 1.75rem;
+      opacity: 1;
+      background: transparent
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ac773c'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e")
+        center/1.3125rem auto no-repeat;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-body {
+    align-items: center;
+    background-color: $my-body-bg-color;
+    color: $my-brown-color;
+  }
+}
+
+.search-bar {
+  &.show {
+    display: flex;
+    margin: 0;
+  }
+}
+
+.search-bar-modal {
+  div {
+    border: none;
+  }
+}
+
+.search-text-button,
+.search-bar {
+  display: none;
+  margin-right: 0.5rem;
+}
+
+.shopping-bag-button {
+  & .badge {
+    font-size: 0.75rem;
+    color: $my-brown-color;
+    background-color: $my-light-pink-color !important;
+    border: 1px solid $my-brown-color;
+    border-radius: 0.25rem;
+    height: fit-content;
+    padding: 0.25rem;
+    margin-left: -9px;
+    margin-top: -7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-bar {
+    display: flex;
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .offcanvas {
+    &-header {
+      background-color: $my-light-pink-color;
+    }
+
+    &-body {
+      background-color: $my-light-pink-color;
+    }
+
+    &-nav {
+      align-items: center;
+    }
+  }
+
+  .nav-item {
+    &.show {
+      display: flex;
+    }
+  }
+
+  .navbar-menu,
+  .search-icon-button {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .search-text-button {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 431px) {
+  .logo-container {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    border: none;
+  }
+
+  .navbar-items-container {
+    width: fit-content;
+    margin: 0;
+
+    & .toggle-button {
+      margin-left: 0;
+    }
+  }
+}
