@@ -6,9 +6,8 @@ import styles from "../styles/home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <Container fluid className={styles.home}>
+    <>
       <Head>
-        <html lang="en-US" />
         <meta charSet="utf-8" />
         <title>Grace Fashion - Glow with Confidence</title>
 
@@ -30,8 +29,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-    </Container>
+      <Container fluid className={styles.home}>
+        <Header />
+      </Container>
+    </>
   );
 };
 
