@@ -5,13 +5,7 @@ import Logo from "../public/images/logo.png";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import {
-  MdMenu,
-  MdPerson,
-  MdSearch,
-  MdShoppingBag,
-  MdShoppingBasket,
-} from "react-icons/md";
+import { MdMenu, MdPerson, MdSearch, MdShoppingBag } from "react-icons/md";
 import styles from "../styles/header.module.scss";
 import Link from "next/link";
 import { Badge, Button, Modal } from "react-bootstrap";
@@ -37,7 +31,12 @@ const Header: NextPage = (props: Props) => {
       <Container fluid>
         <Container fluid className={`${styles["logo-container"]}`}>
           <Navbar.Brand href="#" className={`${styles.logo}`}>
-            <Image src={Logo} alt="Grace Fashion logo" layout="responsive" />
+            <Image
+              src={Logo}
+              alt="Grace Fashion logo"
+              priority
+              layout="responsive"
+            />
           </Navbar.Brand>
         </Container>
         <Container fluid className={`${styles["navbar-items-container"]}`}>
