@@ -30,7 +30,10 @@ const Header: NextPage = (props: Props) => {
     >
       <Container fluid>
         <Container fluid className={`${styles["logo-container"]}`}>
-          <Navbar.Brand href="#" className={`${styles.logo}`}>
+          <Navbar.Brand
+            href="https://gracefashion.eaflores.com"
+            className={`${styles.logo}`}
+          >
             <Image
               src={Logo}
               alt="Grace Fashion logo"
